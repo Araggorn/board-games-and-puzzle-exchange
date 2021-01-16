@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 
 @Entity
@@ -20,4 +21,8 @@ public class Puzzles {
 
     private Integer numberOfPuzzles;
 
-}
+    @ManyToMany(mappedBy = "puzzles")
+    private Collection<User> users;
+
+    }
+

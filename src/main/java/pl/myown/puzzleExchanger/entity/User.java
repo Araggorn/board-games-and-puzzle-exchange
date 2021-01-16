@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -36,6 +38,9 @@ public class User {
 
     @Column (name="role")
     private String role = "ROLE_USER";
+
+    @ManyToMany
+    private List<Puzzles> puzzles = new ArrayList<>();
 
 
 
