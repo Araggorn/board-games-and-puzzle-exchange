@@ -1,8 +1,9 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Registration | Home :: w3layouts</title>
+    <title>Login | Home :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Historical Games Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -42,40 +43,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="jarallax  wthree-subscribe">
     <div class="w3-agileits-testimonial subscribe-bg">
         <div class="container">
-            <h3>Registration to our phenomenal website</h3>
+            <h3>Login to our phenomenal website</h3>
             <div class="w3-agileits-subscribe-form">
-                <form th:action="@{/registration}" method="post" th:object="${user}">
-                    <section>
-                        <label>Username</label>
-                        <input style="color: black" type="text" th:field="*{username}"/>
-                        <span th:if="${#fields.hasErrors('login')}" th:errors="*{username}">Login should have at least 3 letters</span>
-                    </section>
-                    <section>
-                        <label>Password</label>
-                        <input style="color: black"  type="password" th:field="*{password}"/>
-                        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Bad password</span>
-                    </section>
-                    <section>
-                        <label>Email</label>
-                        <input style="color: black"  type="text" th:field="*{email}"/>
-                        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Don't forget about email format!</span>
-                    </section>
-                    <section>
-                        <label>City</label>
-                        <input style="color: black"  type="text" th:field="*{city}"/>
-                        <span th:if="${#fields.hasErrors('city')}" th:errors="*{city}">City must exist</span>
-                    </section>
-                    <section>
-                        <label>Street</label>
-                        <input style="color: black"  type="text" th:field="*{street}"/>
-                        <span th:if="${#fields.hasErrors('street')}" th:errors="*{street}">Don't forget about street</span>
-                    </section>
-                    <section>
-                        <label>Street</label>
-                        <input style="color: black"  type="text" th:field="*{zipCode}"/>
-                        <span th:if="${#fields.hasErrors('zipCode')}" th:errors="*{zipCode}">Don't forget about zip Code format</span>
-                    </section>
-                    <button class="btn1">Subscribe</button>
+                <form th:action="@{/login}" method="post" th:object="${user}">
+                    <input type="text" th:field="*{username}"placeholder="Username" name="username" required="">
+                    <input type="password" th:field="*{password}"placeholder="password" name="password" required="">
+                    <button class="btn1">Login</button>
                 </form>
             </div>
         </div>

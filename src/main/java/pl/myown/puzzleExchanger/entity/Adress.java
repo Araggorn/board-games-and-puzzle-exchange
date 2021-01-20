@@ -6,6 +6,6 @@ import javax.persistence.Embeddable;
 public class Adress {
 
     private String city;
-    private String zipcode;
+    private String zipCode;
     private String street;
 }
