@@ -39,8 +39,8 @@ public class User {
     @Column (name="role")
     private String role = "ROLE_USER";
 
-    @ManyToMany
-    private List<Puzzles> puzzles = new ArrayList<>();
+    @OneToMany (mappedBy = "user")
+    List<Puzzles> puzzles = new ArrayList<>();
 
 
 

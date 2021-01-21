@@ -1,6 +1,7 @@
 package pl.myown.puzzleexchanger.service;
 
 import org.springframework.stereotype.Service;
+import pl.myown.puzzleexchanger.dto.UserDto;
 import pl.myown.puzzleexchanger.entity.User;
 import pl.myown.puzzleexchanger.repository.UserRepository;
 
@@ -28,4 +29,10 @@ public class UserServiceImplementation implements UserService {
     public Long numberOfUsers() {
         return repository.count();
     }
+
+    @Override
+    public void add(UserDto user) {
+
+    }
+
 }

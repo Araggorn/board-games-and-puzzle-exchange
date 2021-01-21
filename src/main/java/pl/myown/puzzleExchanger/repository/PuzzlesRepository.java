@@ -6,4 +6,7 @@ import pl.myown.puzzleexchanger.entity.Puzzles;
 
 @Repository
 public interface PuzzlesRepository extends JpaRepository <Puzzles, Long> {
+
+  //  List<Puzzles> getPuzzlesByUserId(Long id);
+
 }
