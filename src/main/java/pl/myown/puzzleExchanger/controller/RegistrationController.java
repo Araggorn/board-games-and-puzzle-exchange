@@ -28,7 +28,7 @@ public class RegistrationController {
     @PostMapping("/registration")
     public String add(@Valid @ModelAttribute("user") UserDto user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {return "registration";}
-        userService.add(user);
+        userService.save(user);
         return "redirect:/userlist";
     }
 }

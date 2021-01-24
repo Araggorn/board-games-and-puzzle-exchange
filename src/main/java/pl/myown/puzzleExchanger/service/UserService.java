@@ -11,5 +11,7 @@ public interface UserService {
 
     Long numberOfUsers();
 
-    void add(UserDto user);
+    void save(UserDto user);
+
+    void add(User user);
 }

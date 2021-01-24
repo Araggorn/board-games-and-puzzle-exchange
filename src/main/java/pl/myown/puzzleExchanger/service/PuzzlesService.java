@@ -11,4 +11,5 @@ public interface PuzzlesService {
 
     Long numberOfPuzzles();
 
+    void add(Puzzles puzzles);
 }

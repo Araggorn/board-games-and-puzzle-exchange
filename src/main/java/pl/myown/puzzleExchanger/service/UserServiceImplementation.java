@@ -36,8 +36,13 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
-    public void add(UserDto user) {
+    public void save(UserDto user) {
 
     }
 
+    @Override
+    public void add(User user){
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        repository.save(user);
+    }
 }

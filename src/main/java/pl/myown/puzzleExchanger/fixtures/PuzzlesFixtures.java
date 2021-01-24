@@ -12,10 +12,10 @@ import java.util.List;
 @Component
 @Profile({"local", "postgres"})
 public class PuzzlesFixtures {
-    
+
     PuzzlesService puzzlesService;
 
-    private final List<Puzzles> teamList = Arrays.asList(
+    private final List<Puzzles> puzzleList = Arrays.asList(
             new Puzzles(null, "White Dragon", 1000),
             new Puzzles(null, "Smurphs", 80),
             new Puzzles(null, "My family in the forest", 300)
@@ -27,5 +27,8 @@ public class PuzzlesFixtures {
     }
 
     public void loadIntoDB() {
+        for (Puzzles puzzles : puzzleList) {
+            puzzlesService.add(puzzles);
+        }
     }
 }

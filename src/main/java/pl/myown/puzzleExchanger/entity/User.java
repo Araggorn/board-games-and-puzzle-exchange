@@ -42,10 +42,14 @@ public class User {
     @OneToMany (mappedBy = "user")
     List<Puzzles> puzzles = new ArrayList<>();
 
-
-
-
-
-
-
+    public User(Long id, String username, String password, String email, String created, String updated, boolean active, String role) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.created = created;
+        this.updated = updated;
+        this.active = active;
+        this.role = role;
+    }
 }
