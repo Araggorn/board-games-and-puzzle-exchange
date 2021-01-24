@@ -23,5 +23,10 @@ public class Puzzles {
     @ManyToOne
     private User user;
 
+    public Puzzles(Long id, String name, Integer numberOfPuzzles) {
+        this.id = id;
+        this.name = name;
+        this.numberOfPuzzles = numberOfPuzzles;
     }
+}
 

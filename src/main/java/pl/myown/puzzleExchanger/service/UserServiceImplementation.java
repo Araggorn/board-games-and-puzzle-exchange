@@ -1,5 +1,7 @@
 package pl.myown.puzzleexchanger.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.myown.puzzleexchanger.dto.UserDto;
 import pl.myown.puzzleexchanger.entity.User;
@@ -13,9 +15,12 @@ import java.util.List;
 public class UserServiceImplementation implements UserService {
 
     UserRepository repository;
+    PasswordEncoder passwordEncoder;
 
-    public UserServiceImplementation(UserRepository repository) {
+    @Autowired
+    public UserServiceImplementation(UserRepository repository, PasswordEncoder passwordEncoder) {
         this.repository = repository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     // -------------------------------------

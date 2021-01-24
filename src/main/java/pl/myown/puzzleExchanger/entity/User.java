@@ -34,13 +34,17 @@ public class User {
 
     private String created;
     private String updated;
-    private boolean active;
+    private boolean active = true;
 
     @Column (name="role")
     private String role = "ROLE_USER";
 
     @OneToMany (mappedBy = "user")
     List<Puzzles> puzzles = new ArrayList<>();
+
+
+
+
 
 
 
