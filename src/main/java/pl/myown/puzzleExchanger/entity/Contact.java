@@ -19,6 +19,9 @@ public class Contact {
     private Long id;
 
     @NotNull
+    private String name;
+
+    @NotNull
     @Email
     private String email;
 
